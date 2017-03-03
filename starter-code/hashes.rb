@@ -1,8 +1,17 @@
 ##############################
 #### MANIPULATING HASHES ####
 ##############################
-#character_count
-  # takes in a string
+def character_count str
+  char = {}
+  str.downcase.each do |letter|
+    if char[letter].nil?
+      char[letter] = 1
+    else 
+      char[letter] =+ 1
+    end
+  end
+  char
+end
   # counts how many times each character appears in a string
   # ignores case
   # returns the hash

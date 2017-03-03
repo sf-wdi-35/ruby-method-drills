@@ -1,35 +1,34 @@
 ##############################
 #### MANIPULATING STRINGS ####
 ##############################
-#first_char
-  # takes in a word
-  # returns the first letter of the word
-  # lowercases the first letter of the word
+def first_char str
+  str[0].downcase
+end
 
-#polly_wanna
-  # takes in a word
-  # echoes the original word
-  # repeats the original word 3 times
-  # returns a string with the word repeated
+def polly_wanna str
+  str*3
+end
 
-#count_chars
-  # takes in a word
-  # returns the number of characters in the word
-
-#yell
-  # takes in a message
-  # convert the message to uppercase
-  # adds an exclamation point to the end of the message
-  # returns the message
+def count_chars str
+  str.length
+end
+  
+def yell str
+  str.upcase + "!"
+end
 
 ## STRETCH ##
-#to_telegram
+def to_telegram str
+  str.gsub(/"."/, ' STOP')
+end
   # takes in a message
   # replaces periods with ' STOP'
   # returns the updated message
 
 
-#spell_out
+def spell_out str
+  str.downcase
+end
   # takes in a string
   # converts the string to lowercase
   # returns the input string, with characters seperated by dashes
@@ -42,24 +41,45 @@
   # returns the modified string
 
 ## STRETCH ##
-#croon
+def croon str
+  str.gsub(/" "/, "-")
+end
   # seperates word characters with dashes
   # preserves whitespace between words
 
-#palindrome_word?
-  # determines whether a single word is a palindrome
-  # ignores case
-  # returns true or false
-
+def palindrome_word? str
+  new_str = str.downcase
+  if new_str == new_str.reverse
+    true
+  else
+    false
+  end
+end
 
 ## SUPER STRETCH ##
-#palindrome_sentence?
+def palindrome_sentence? str
+  new_str = str.downcase.split(" ").join
+  if new_str == new_str.reverse
+    true
+  else
+    false
+  end
+end
   # determines whether a sentence is a palindrome
   # ignores case
   # ignores whitespace
   # ignores punctuation
 
-#is_vowel
+def is_vowel char
+  vowels = "aeiou".split("")
+  vowels.each do |vowel|
+    if vowel == char.downcase
+      true
+    else
+      false
+    end
+  end
+end
   # takes in a string of one character
   # determines whether the character is a vowel
   # ignores case
