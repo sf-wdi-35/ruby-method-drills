@@ -7,6 +7,10 @@
   # ignores case
   # returns the hash
 
+  def character_count str
+    
+  end
+
 ## STRETCH ##
 #word_count
   # takes in a string
