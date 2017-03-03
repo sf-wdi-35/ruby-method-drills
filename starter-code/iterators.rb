@@ -1,21 +1,40 @@
 ###########################
 #### LOOPS & ITERATORS ####
 ###########################
+
 #count_spaces
+
+def count_spaces(str)
+  count = 0
+  space = " "
+  str.each_char do |char|
+    if char == space
+      count += 1
+    end
+  end
+  count
+end
   # takes in a string
   # counts the spaces in a string
   # returns number of spaces
 
 #string_lengths
-  # takes in an array of strings
-  # returns an array containing the lengths of the strings
+def string_lengths(list)
+  list.map {|str| str.length }
+end
 
 #remove_falsy_values
+def remove_falsy_values(list)
+  list.select { |item| !!item }
+end
   # takes in a list
   # filters out falsy values from a list
   # returns the updated list
 
 #exclude_last
+def exclude_last(arr_or_str)
+  arr_or_str[0..-2]
+end
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
