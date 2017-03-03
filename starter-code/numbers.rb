@@ -1,19 +1,45 @@
 ##############################
 #### MANIPULATING NUMBERS ####
 ##############################
-#count_to
-  # takes in a number
-  # returns an array containing every integer from 0 to n
-  # counts up or down
-  # rounds off decimals
 
-#is_integer?
+# tested this in irb and it works for both negative and positive integers, but the test says it is returning nil
+def count_to n
+  num_arr = []
+
+  if n >= 0
+    (0..n).each do |i|
+      num_arr.push(i)
+    end
+  # else n < 0
+  #   (n..0).each do |i|
+  #   num_arr << i
+    num_arr
+  end
+end
+
+
+# def is_integer?(num)
+#   num.class == Fixnum || num.class == Bignum ||
+#     ( num.is_a?(Float) && !num.nan? && num.to_i == num )
+# end
+
+
+def is_integer? n
+  if (n.class == Fixnum || Bignum) || (n.is_a?(Float) && !n.nan? && n.to_i == n)
+    return true
+  else
+    return false
+  end
+end
+
+def end
   # takes in a number
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
   # returns true for Floats (decimals) equal to integers
   # returns false for non-integer decimals
   # returns false for Float::NAN
   # returns false for non-numbers
+end
 
 #is_prime?
   # takes in a number and checks if it's prime
@@ -36,3 +62,4 @@
   # returns NaN for numbers less than 0
   # returns NaN for non-integers
   # calculates and returns the factorial of the input number
+

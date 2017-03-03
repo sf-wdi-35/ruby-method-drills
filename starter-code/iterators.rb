@@ -1,14 +1,31 @@
 ###########################
 #### LOOPS & ITERATORS ####
 ###########################
-#count_spaces
-  # takes in a string
-  # counts the spaces in a string
-  # returns number of spaces
+def count_spaces str
+  space_count = 0
+  str.
+  str_arr.each do |c|
+    if c == " "
+      space_count += 1
+    end
+    return space_count
 
-#string_lengths
-  # takes in an array of strings
-  # returns an array containing the lengths of the strings
+#   if str.include?(" ")
+#     str_arr = str.split(" ")
+#   # takes in a string
+#   # counts the spaces in a string
+#   # returns number of spaces
+  end
+ end
+
+def string_lengths arr
+  str_length_arr = []
+  for arr.each { |str| p "str"}
+    # str_length_arr.push(str.length)
+  return str_length_arr
+#   # takes in an array of strings
+#   # returns an array containing the lengths of the strings
+end
 
 #remove_falsy_values
   # takes in a list
