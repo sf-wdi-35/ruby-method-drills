@@ -1,13 +1,23 @@
 ##############################
 #### MANIPULATING NUMBERS ####
 ##############################
-#count_to
-  # takes in a number
-  # returns an array containing every integer from 0 to n
-  # counts up or down
-  # rounds off decimals
+def count_to(num)
+  n = num.to_i
+  if n >= 0
+    (0..n).to_a
+  else
+    0.downto(n).to_a
+  end
+end
 
-#is_integer?
+# got the integer conversion, and array of positives. The neg conditional not so much.
+
+def is_integer?(num)
+  num.class == Fixnum || num.class == Bignum || ( !num.nan? && (num.to_i == num) && num.is_a?(Float) )
+end
+
+# Needed to look up the float check, and specifying .class for num
+
   # takes in a number
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
   # returns true for Floats (decimals) equal to integers
