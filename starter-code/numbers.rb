@@ -7,6 +7,15 @@
   # counts up or down
   # rounds off decimals
 
+  def count_to n
+    if n >= 0
+      (0..n).to_a
+    else
+      0.downto(n).to_a
+    end
+  end
+
+
 #is_integer?
   # takes in a number
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
@@ -15,6 +24,12 @@
   # returns false for Float::NAN
   # returns false for non-numbers
 
+  def is_integer? n
+    n.class == Fixnum || n.class == Bignum ||
+    ( n.is_a?(Float) && !n.nan? && n.to_i == n )
+
+  end
+
 #is_prime?
   # takes in a number and checks if it's prime
   # returns false for non-integer decimals
@@ -22,6 +37,10 @@
   # returns false for numbers divisible by anything but 1 and themselves
   # returns true for prime numbers
   # Hint: google prime numbers!
+
+  # def is_prime? n
+  #   if
+  # end
 
 #primes_less_than
   # takes in a number
