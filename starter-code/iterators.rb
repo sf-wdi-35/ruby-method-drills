@@ -1,48 +1,73 @@
 ###########################
 #### LOOPS & ITERATORS ####
 ###########################
-#count_spaces
-  # takes in a string
-  # counts the spaces in a string
-  # returns number of spaces
+def count_spaces str
+  count = 0
+  str.split("").each do |val|
+    if val == " "
+      count += 1
+    end
+    count
+  end
+end
 
-#string_lengths
-  # takes in an array of strings
-  # returns an array containing the lengths of the strings
+def string_lengths arr
+  arr.map do |str|
+    str.length
+  end
+end
+  
+def remove_falsy_values arr
+  arr.select do |val|
+    !!val
+  end
+end
 
-#remove_falsy_values
-  # takes in a list
-  # filters out falsy values from a list
-  # returns the updated list
-
-#exclude_last
+def exclude_last arr
+  arr[0..-2]
+end
+#   arr.pop
+#   arr
+# end
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
 
-#exclude_first
+def exclude_first arr
+  arr[1..-1]
+end
+#   arr.shift
+#   arr
+# end
   # takes in an array or string
   # removes the first item from an array
   # removes the first character from a string
   # returns a new string - does not alter the original input (non-destructive)
 
-#exclude_ends
+def exclude_ends arr
+  arr[1..-2]
+end
   # takes in an array or string
   # removes the first and last items from an array
   # removes the first and last characters from a string
 
-#select_every_even
-  # takes in an array
-  # returns a list of even-indexed items from the input
+def select_every_even arr
+  arr.select.with_index do |val, idx| 
+    val if idx.even? == true 
+  end
+end
+  
+def select_every_odd arr
+  arr.select.with_index do |val, idx| 
+    val if idx.odd? == true 
+  end
+end
 
-#select_every_odd
-  # takes in an array
-  # returns a list of odd-indexed items
-
-#select_every_n
-  # takes in an array
-  # returns a list of items at an index evenly divisible by n
-  # defaults to an n value of 1
+def select_every_n arr, n=1
+  arr.select.with_index do |val, idx| 
+    val if idx % n == 0
+  end
+end
 
 ## STRETCH ##
 #compile_agenda
