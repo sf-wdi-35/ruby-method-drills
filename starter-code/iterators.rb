@@ -1,35 +1,44 @@
 ###########################
 #### LOOPS & ITERATORS ####
 ###########################
-#count_spaces
-  # takes in a string
-  # counts the spaces in a string
-  # returns number of spaces
+def count_spaces(string)
+  spaces = 0
+  space = " "
+  string.each_char do |thing|
+    if thing == space
+      spaces += 1
+    end
+  end
+  spaces
+end
 
-#string_lengths
-  # takes in an array of strings
-  # returns an array containing the lengths of the strings
+def string_lengths(strarr)
+  strarr.map {|n| n.length }
+end
 
-#remove_falsy_values
-  # takes in a list
-  # filters out falsy values from a list
-  # returns the updated list
+def remove_falsy_values(nofalse)
+  # nofalse.reject {|thing| !!thing}
+  nofalse.select {|thing| !!thing}
+end
 
-#exclude_last
-  # takes in an array or string
-  # removes the last item from the array or string
-  # returns it
+def exclude_last(str)
+  # str.pop
+  # str
+  str[0..-2]
+end
 
-#exclude_first
-  # takes in an array or string
-  # removes the first item from an array
-  # removes the first character from a string
-  # returns a new string - does not alter the original input (non-destructive)
+def exclude_first(str)
+  # str.shift
+  # str
+  str[1..-1]
+end
 
-#exclude_ends
-  # takes in an array or string
-  # removes the first and last items from an array
-  # removes the first and last characters from a string
+def exclude_ends(str)
+  # str.pop
+  # str.shift
+  # str
+  str[1..-2]
+end
 
 #select_every_even
   # takes in an array
