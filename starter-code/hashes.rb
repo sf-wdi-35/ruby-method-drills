@@ -1,11 +1,11 @@
 ##############################
 #### MANIPULATING HASHES ####
 ##############################
-#character_count
-  # takes in a string
-  # counts how many times each character appears in a string
-  # ignores case
-  # returns the hash
+# def character_count
+#   takes in a string
+#   counts how many times each character appears in a string
+#   ignores case
+#   returns the hash
 
 ## STRETCH ##
 #word_count
