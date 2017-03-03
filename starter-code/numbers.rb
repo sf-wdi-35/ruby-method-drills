@@ -1,19 +1,22 @@
 ##############################
 #### MANIPULATING NUMBERS ####
 ##############################
-#count_to
-  # takes in a number
-  # returns an array containing every integer from 0 to n
-  # counts up or down
-  # rounds off decimals
+def count_to(num)
+  if n >= 0
+    (0..n).to_a
+  else
+    0.downto(n).to_a
+  end
+end
 
-#is_integer?
-  # takes in a number
+def is_integer?(num)
+  # if Fixnum 
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
   # returns true for Floats (decimals) equal to integers
   # returns false for non-integer decimals
   # returns false for Float::NAN
   # returns false for non-numbers
+end
 
 #is_prime?
   # takes in a number and checks if it's prime
