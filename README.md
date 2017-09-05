@@ -22,11 +22,11 @@ This will be *way* more practice with Ruby methods and test driven development -
 
 ### Setup
 
-Fork this repo on GitHub.
+Clone this repo on GitHub.
 
 ``` bash
-git clone YOUR_FORK_CLONE_URL.git
-cd ruby_method_drills
+git clone https://github.com/SF-WDI-LABS/ruby-method-drills
+cd ruby-method-drills
 ```
 
 The files you'll work on are:
@@ -35,11 +35,11 @@ The files you'll work on are:
 
 2. `strings.rb`  -- (test file is `string_spec.rb`)
 
-3. `iterators.rb`  -- (test file is `iterator_spec.rb`)
+3. `numbers.rb`  -- (test file is `number_spec.rb`)
 
-4. `numbers.rb`  -- (test file is `number_spec.rb`)
+4. `hashes.rb`  -- (test file is `hash_spec.rb`)
 
-5. `hashes.rb`  -- (test file is `hash_spec.rb`)
+5. `iterators.rb`  -- (test file is `iterator_spec.rb`)
 
 #### Testing
 
